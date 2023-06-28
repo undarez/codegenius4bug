@@ -1,0 +1,166 @@
+@import'../../utils/typographies';
+body{
+    background-color: #e0d8d8;
+//     animation: bgAnim 10s infinite alternate linear;
+// }
+// @keyframes bgAnim {
+//     0% {
+//         background-color: #EE6055;
+//     }
+//     25%{
+//         background-color: #eeC355;
+//     }
+//     50%{
+//         background-color: #8AFE76;
+//     }
+//     75%{
+//         background-color: #55D2EE;
+//     }
+//     100%{
+//         background-color: #EE55EE;
+//     }
+}
+.container-qrcode {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 40px;
+
+    .container-copy{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .copyright{
+            list-style: none;
+            text-decoration: none;
+            color: $color-text_black;
+            font-size: 18px;
+            font-family: $police-input;
+            font-weight: 600;
+        }
+
+        img{
+            padding-left: 10px;
+            width: 60px;
+            height: auto;
+        }
+    }
+   
+
+
+    .container-form {
+        padding-bottom: 20px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .labelCss {
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+
+            font: {
+                size: 18px;
+                weight: 600;
+                family: $police-paragraphe-apropos;
+            }
+        }
+
+        .inputCss {
+            font-family: $police-input ;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .bgColorCss {
+
+            height: 100%;
+            padding: 10px;
+            border-radius: 999px
+        }
+
+        .container-button {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 280px;
+            gap: 20px;
+            
+            .buttonCss {
+                width: 280px;
+                padding: 6px;
+
+                font-size: 16px;
+                font-family: $police-input;
+                font-weight: 600;
+                border-radius: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(145deg, #ffffff, #ffffff);
+                border: 1px solid #e8e8e8;
+                transition: all .3s;
+            //     box-shadow:  23px 23px 46px #b8b8b8,
+            //  -23px -23px 46px #fafafa;
+            }
+
+            .buttonCss:active {
+                color: #666;
+                box-shadow: inset 23px 23px 46px #e79e9e,
+            inset -23px -23px 46px #fafafa;
+            }
+        }
+        .container-button-2{
+            
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 320px;
+            gap: 20px;
+
+            .buttonCss-2 {
+                width: 400px;
+                height: 40px;
+                
+
+                font-size: 12px;
+                font-family: $police-input;
+                font-weight: 600;
+                border-radius: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(145deg, #ffffff, #ffffff);
+                border: 1px solid #e8e8e8;
+                transition: all .3s;
+            //     box-shadow:  23px 23px 46px #b8b8b8,
+            //  -23px -23px 46px #fafafa;
+            }
+
+            .buttonCss-2:active {
+                color: #666;
+                box-shadow: inset 23px 23px 46px #e79e9e,
+            inset -23px -23px 46px #fafafa;
+            }
+
+        }
+
+    }
+
+
+
+}
+
+// @media screen and (max-width: 425px){
+//     .labelCss{
+//         width: 45%;
+//     }
+// }

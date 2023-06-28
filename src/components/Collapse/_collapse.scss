@@ -1,0 +1,92 @@
+@import '../../utils/typographies.scss';
+
+.containerCollapse {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 5px;
+
+    .bgCollapse {
+        overflow: hidden;
+        transition: height 0.4s ease;
+        height: 0;
+        width: 100%;
+        height: auto;
+        background: $color-container-bg;
+        color: $color-text_white;
+        display: flex;
+        margin-bottom: 20px;
+        border-radius: 5px;
+
+        p {
+            text-align: center;
+            padding: 20px;
+            font-family: $police-paragraphe-apropos;
+            color: $color-text_black;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        ul {
+            padding: 20px;
+            font-family: $police-input;
+            color: $color-text;
+            font-size: 24px;
+            font-weight: 400;
+            list-style: none;
+        }
+
+
+
+        summary {
+            width: 100%;
+            height: auto;
+            font-size: 24px;
+            font-weight: 500;
+            font-family: $police-paragraphe-apropos;
+            color: $color-text_black;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-radius: 5px;
+            background: $color-text;
+            transition: translate 0.3s;
+
+            svg {
+                fill: $color-text_black;
+                width: 20px;
+                height: auto;
+                transform: rotate(180deg);
+                transition: 0.5s ease-in-out;
+            }
+        }
+        summary:active {
+            translate: 20px;
+        }
+    }
+}
+
+
+
+@media(max-width:475px) {
+
+    .containerCollapse {
+        max-width: 290px;
+
+        .bgCollapse {
+            summary {
+                align-items: center;
+
+                font: {
+                    size: 13px;
+                }
+
+                svg {
+                    width: 12px;
+                }
+            }
+        }
+    }
+
+}

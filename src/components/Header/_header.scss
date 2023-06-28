@@ -1,0 +1,208 @@
+@import'../../utils/typographies';
+
+header {
+    position: relative;
+    display: flex;
+    max-width: 1240px;
+    min-width: 240px;
+    height: 90px;
+
+    .container-header {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $color-Bg-Header;
+        border-radius: 10px;
+        box-shadow: 3px 5px 5px rgb(0, 0, 0, 0.4);
+
+        //logo code barre
+        .assetLogo {
+            padding: 20px;
+            width: 100px;
+            height: auto;
+        }
+
+        //titre de l'app
+        .titre {
+            height: auto;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+            text-shadow: 1px 3px 0 #969696,
+                1px 13px 5px #aba8a8;
+
+            font: {
+                size: 35px;
+                family: $police-paragraphe;
+                weight: 500;
+            }
+        }
+
+        .titre:hover {
+            color: black;
+        }
+
+
+        //les lien vers les pages
+        ul,
+        li {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            font-family: $police-input;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            margin: 0.5em;
+            padding: 10px 15px;
+            color: black;
+            border-radius: 10px
+        }
+
+        a {
+            transition: all .5s ease-in-out;
+            text-decoration: none;
+            color: #666;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        li:hover {
+            background-color: #017592;
+            box-shadow: 3px 5px 5px;
+        }
+
+        //button select
+        .dropdown-menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            cursor: pointer;
+            width: 60px;
+            height: 30px;
+            background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+            border-radius: 20px;
+            border: 1px solid #8F9092;
+            transition: all 0.2s ease;
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: #606060;
+            text-shadow: 0 1px #fff;
+        }
+
+        .dropdown-menu:hover {
+            box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+        }
+
+        .dropdown-menu:active {
+            box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+
+        }
+
+        .dropdown-menu:focus {
+            box-shadow: 0 5px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+        }
+    }
+}
+
+// debut media querry
+
+@media screen and (max-width:980px) {
+    header {
+        .container-ul {
+            width: 150px;
+            height: auto;
+            background: $color-Bg-Header;
+            position: absolute;
+            top: 90px;
+            right: 97px;
+            border-radius: 0 0 10px 10px;
+            transition: all 1s ease-in-out;
+            opacity: 40% 0.3s;
+            box-shadow: 0 4px 3px 1px #1d1d1d, 0 3px 5px #D6D7D9, 0 3px 4px #CECFD1, 0 8px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #ffffff;
+
+            .menu-list {
+                flex-direction: column;
+
+            }
+        }
+    }
+}
+
+;
+
+
+
+@media screen and (max-width:475px) {
+    header {
+        .container-ul {
+            width: 100px;
+            right: 3px;
+        }
+
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        right: 10px;
+    }
+}
+
+;
+
+//ce media permet de mettre la liste de liens sur une ligne horizontale centrer avec son container parent largeur à 99%.
+@media screen and (max-width:474px) {
+    header {
+        .container-ul {
+            width: 99%;
+
+            .menu-list {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+;
+
+// ce media permet de reduire le titre, ainsi que le button vers liens.
+@media screen and (max-width:320px) {
+    header {
+        .container-header {
+
+            .titre {
+                font-size: 25px;
+            }
+
+            .dropdown-menu {
+                width: 50px;
+                height: 20px;
+                right: 2px;
+                bottom: 32px;
+            }
+        }
+    }
+}

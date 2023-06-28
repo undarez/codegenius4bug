@@ -1,0 +1,44 @@
+@import '../../utils/_typographies';
+
+.container-location{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        font-size: 45px;
+        font-family: $police-titre;
+        font-weight: 600;
+    }
+
+    p{
+        font-size: 18px;
+        font-family: $police-paragraphe-apropos;
+        font-weight: 600;
+        text-align: center;
+        padding: 20px;
+    };
+}
+
+@media screen and (max-width:491px){
+    .container-location{
+
+        h1{
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (max-width:354px){
+    .container-location{
+        h1{
+            font-size: 20px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}
